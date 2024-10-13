@@ -1,0 +1,83 @@
+
+import book as b
+
+
+def titulo_ascendente(l1: b.Book, l2: b.Book):
+    """
+    Método para determinar la relación de los libros con respecto a su título
+    :param l1: El primer libro a comparar por titulo
+    :param l2: El segundo libro a comparar por titulo
+    :return: -1 si l1 tiene un titulo lexicográficamente menor que l2, 0 si son iguales, 1 en otro caso
+    """
+    if l1 is None:
+        return -1
+    elif l2 is None:
+        return 1
+    elif l1.titulo < l2.titulo:
+        return -1
+    elif l1.titulo > l2.titulo:
+        return 1
+    else:
+        return 0
+
+
+def autor_ascendente(l1: b.Book, l2: b.Book):
+    """
+    Método para determinar la relación de los libros con respecto a su autor
+    :param l1: El primer libro a comparar por autor
+    :param l2: El segundo libro a comparar por autor
+    :return: -1 si l1 tiene un autor lexicográficamente menor que l2, 0 si son iguales, 1 en otro caso
+    """
+    if l1 is None:
+        return -1
+    elif l2 is None:
+        return 1
+    elif l1.autor < l2.autor:
+        return -1
+    elif l1.autor > l2.autor:
+        return 1
+    else:
+        return 0
+
+
+def editorial_ascendente(l1: b.Book, l2: b.Book):
+    """
+    Método para determinar la relación de los libros con respecto a su editorial
+    :param l1: El primer libro a comparar por editorial
+    :param l2: El segundo libro a comparar por editorial
+    :return: -1 si l1 tiene una editorial lexicográficamente menor que l2, 0 si son iguales, 1 en otro caso
+    """
+    if l1 is None:
+        return -1
+    elif l2 is None:
+        return 1
+    elif l1.editorial < l2.editorial:
+        return -1
+    elif l1.editorial > l2.editorial:
+        return 1
+    else:
+        return 0
+
+
+def autor_anio_ascendente(l1: b.Book, l2: b.Book):
+    """
+    Método para determinar la relación de los libros con respecto a su autor y su año de publicación
+    :param l1: El primer libro a comparar por autor y año
+    :param l2: El segundo libro a comparar por autor y año
+    :return: -1 si l1 tiene una autor lexicográficamente menor que l2, 0 si son iguales, 1 en otro caso
+    """
+    if l1 is None:
+        return -1
+    elif l2 is None:
+        return 1
+    elif l1.autor < l2.autor:
+        return -1
+    elif l1.autor > l2.autor:
+        return 1
+    else:
+        if l1.anio < l2.anio:
+            return -1
+        elif l1.anio > l2.anio:
+            return 1
+        else:
+            return 0
